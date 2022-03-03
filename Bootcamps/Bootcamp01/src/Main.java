@@ -4,7 +4,7 @@ public class Main{
 
         person.name = "abc";
         person.age = 25;
-        person.color = "white";
+        person.color = "whiteiuasdieqwsgdjkasgdjas";
 
         person.displayInformation();
 
