@@ -30,6 +30,8 @@ public class CarAuction{
     //Print Auction Status method
     public void printStatus(){
         System.out.println("Welcome to FIT2099 Car Auction Systems");
+        createCars();
+        displayCar();
         System.out.println("Thank you for visiting FIT2099 Car Auction System");
     }
 }
