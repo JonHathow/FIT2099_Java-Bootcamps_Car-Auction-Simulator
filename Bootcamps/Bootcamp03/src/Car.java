@@ -8,7 +8,7 @@ public class Car{
 
     //Methods
     //Get Car Description
-    public void getCarDescription(){
+    public void description(){
         System.out.println("MY"+ getModelYear() + " " + getMake() + " " + getModel());
     }
 
