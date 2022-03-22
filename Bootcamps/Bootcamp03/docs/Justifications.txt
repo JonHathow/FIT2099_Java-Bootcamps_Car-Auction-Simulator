@@ -19,4 +19,5 @@ ids, and thus could take up more space and memory.
 
 For this bootcamp's implementation, I decided to choose integer type to represent ClientId, and BidId, as
 since arithmetic operatioins can be applied on Java integers, I can calculate the next id, or generate ids using
-random number generators. They are also shorter and easier to create and manage.
+random number generators. They are also shorter and easier to create and manage. I will also be using integer id
+as String Id needs to be decomposed to change it's numeric component, making it more complex to update.

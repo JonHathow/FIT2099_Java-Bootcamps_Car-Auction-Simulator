@@ -1,12 +1,22 @@
 package Bootcamps.Bootcamp03.src;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Date;
 
 public class Car{
     //Attributes
     private String make;
     private String model;
     private int modelYear;
+    //Bids
+    private List<Bid> bids = new ArrayList<>();
 
     //Methods
+    //Add bid
+    public void addBid(Client newClient, int newPrice, Date newDate){
+
+    }
+
     //Get Car Description
     public void description(){
         System.out.println("MY"+ getModelYear() + " " + getMake() + " " + getModel());
