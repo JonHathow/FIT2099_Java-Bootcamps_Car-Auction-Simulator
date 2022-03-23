@@ -49,4 +49,9 @@ public class Bid {
     public void setBidDate(String bidDate) {
         this.bidDate = bidDate;
     }
+
+    //Description Method
+    public String description(){
+        return "Bid Id: " + getBidId() + ", Bid Price: " + getBidPrice() + ", Bid Date: " + getBidDate() + ", Bid Client: " + getClient().description();
+    }
 }

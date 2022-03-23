@@ -19,7 +19,18 @@ public class Car{
 
     //Get Car Description
     public void description(){
+        //Car description
         System.out.println("MY"+ getModelYear() + " " + getMake() + " " + getModel());
+        System.out.println("Bids: ");
+
+        //Bids and Clients description.
+        if (bids.size() > 0){
+            for (Bid bid:bids) {
+                System.out.println(bid.description());
+            }
+        } else {
+            System.out.println("None");
+        }
     }
 
     //Car Constructor

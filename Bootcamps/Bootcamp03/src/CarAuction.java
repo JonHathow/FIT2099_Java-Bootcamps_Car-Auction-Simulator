@@ -27,8 +27,7 @@ public class CarAuction{
         modelYear = scanner.nextInt();
         car1.createCar(maker, model, modelYear);
         //Closure statement - To assure user that a cas has been added to the car auction.
-        System.out.print("Added a new car : ");
-        car1.description();
+        System.out.println("Added a new car : " + maker + " " + model + " " + modelYear);;
         System.out.println("--------------------------------------");
 
         //Add Bids
@@ -40,14 +39,16 @@ public class CarAuction{
                     System.out.println("Please enter the details of the client whom is placing the bid.");
 
                     //Adding Client
+                    System.out.print("Please enter the Client's Id Number: ");
+                    int clientId = scanner.nextInt();
                     System.out.print("Please enter the Client's First Name: ");
                     String clientFName = scanner.next();
                     System.out.print("Please enter the Client's Last Name: ");
                     String clientLName = scanner.next();
-                    Client client = new Client(Utils.nextID(), clientFName, clientLName);
+                    Client client = new Client(clientId, clientFName, clientLName);
 
                     //Adding Bid Price and Bid Date
-                    System.out.println("Welcome Client: " + client.description());
+                    System.out.println("Welcome Client " + client.description());
                     System.out.print("Please enter the Client's preferred Bid Amount: ");
                     int bidPrice= scanner.nextInt();
                     System.out.print("Please enter the bid date in the form: day/month/year ");
@@ -69,8 +70,7 @@ public class CarAuction{
         } while (selection != 2);
         System.out.println(bidQuantity + " Bids have been added to the car: " + maker + " " + model + " " + modelYear + ".");
         carArray.add(car1);
-        System.out.println("Car addition to auction complete for car: ");
-        car1.description();
+        System.out.println("Car addition to auction complete.");
         System.out.println("--------------------------------------");
     }
 
