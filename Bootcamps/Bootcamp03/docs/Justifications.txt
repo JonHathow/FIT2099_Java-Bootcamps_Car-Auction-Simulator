@@ -4,26 +4,29 @@ ClientId Type - Numeric Integer or Java String
 
 The following is my justification in deciding the type to use for ClientId.
 
-Several design advantages of using the numeric integer type for Ids is that  integers
+Several design advantages of using the numeric integer type for Ids is that integers
 save storage space and memory, as they are generally shorter then Java String type id, which would
-contain a mix of alphabeting characters and numbers. Integer ids are easy to create as they are short, and
+contain a mix of alphabetic characters and numbers. Integer ids are easy to create as they are short, and
 are easier to directly compare with the previous or next object's id within the same class.
 Furthermore, the next id integer value can be calculated, as arithmetic
 operations can be done on integers in java, thus also allowing random number generators to
-randomly generate integer ids. However integers ids are not entirely unique when
-compared directly class to class. Example, Client of Id = 1 and Bid of Id = 1 will have matching
-Ids on a first glance, and java will interpret these integer ids as having the same value.
+randomly generate integer ids. However a disadvantage of integer ids, is that they are not entirely unique when
+compared directly from class to class. Example, Client of Id = 1 and Bid of Id = 1 will have matching
+Ids on a first glance, and java will interpret these integer ids as having the same value and same type
+(1 == 1).
 
-String Ids on the other hand are more meaningful as the alphabetic characters in the Id
-makes it easily identifiable to it's respective class. This allows it to
-avoid clashes with other object's Ids, as each object's respective Id is unique to the class
-it was created from. However, it requires more characters to create, making them longer than integer
-ids, and thus could take up more space and memory.
+On the other hand, String Ids have an advantage of being more meaningful as the alphabetic characters in the Id
+makes it easily identifiable to it's respective class. For example, Client id: CLNT001 can be
+recognised as being associated to client number 1. This allows it to avoid clashes with other
+class's object Ids, as each object's respective Id is unique to the class it was created from.
+For Example, CLNT001 and BID001 would not be equal to each other value comparison wise (CLNT001 != BID001),
+and it is easy to recognise that CLNT001 is a Client id, and BID001 is a bid id. However,
+it requires more characters to create, making them longer and much more difficult to create than integer ids,
+and thus could take up more space and memory.
 
-For this bootcamp's implementation, I decided to choose integer type to represent ClientId, and BidId, as
-since arithmetic operatioins can be applied on Java integers, I can calculate the next id, or generate ids using
+For this bootcamp's implementation, I decided to choose integer type to represent ClientId, and BidId.
+Since arithmetic operations can be applied on Java integers, I can calculate the next id, or generate ids using
 random number generators. They are also shorter and easier to create and manage. I will also be using integer id
 as String Id needs to be decomposed to change it's numeric component, making it more complex to increment the next
-String Id, or update an existing one.
-
-Task 8
+String Id, or update an existing one. For Example, CLNT001 would need to be split into "CLNT" and 001, where 001
+is the incremental part that can become 002. The number 002 then has to be appended to "CLNT" to make CLNT002.

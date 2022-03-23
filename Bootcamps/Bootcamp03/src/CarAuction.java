@@ -27,8 +27,7 @@ public class CarAuction{
         modelYear = scanner.nextInt();
         car1.createCar(maker, model, modelYear);
         //Closure statement - To assure user that a cas has been added to the car auction.
-        System.out.println("Added a new car : " + maker + " " + model + " " + modelYear);;
-        System.out.println("--------------------------------------");
+        System.out.println("Added a new car : " + maker + " " + model + " " + modelYear);
 
         //Add Bids
         do {
@@ -36,7 +35,7 @@ public class CarAuction{
             switch(selection){
                 case 1:
                     System.out.println("Adding a bid . . .");
-                    System.out.println("Please enter the details of the client whom is placing the bid.");
+                    System.out.println("--------------------------------------");
 
                     //Adding Client
                     System.out.print("Please enter the Client's Id Number: ");
@@ -49,7 +48,7 @@ public class CarAuction{
 
                     //Adding Bid Price and Bid Date
                     System.out.println("Welcome Client " + client.description());
-                    System.out.print("Please enter the Client's preferred Bid Amount: ");
+                    System.out.print("Please enter the Client's preferred Bid Price: ");
                     int bidPrice= scanner.nextInt();
                     System.out.print("Please enter the bid date in the form: day/month/year ");
                     System.out.print("(Example: 23/03/2022): ");
@@ -68,6 +67,8 @@ public class CarAuction{
                     break;
             }
         } while (selection != 2);
+
+        //Adding Car to car ArrayList
         System.out.println(bidQuantity + " Bids have been added to the car: " + maker + " " + model + " " + modelYear + ".");
         carArray.add(car1);
         System.out.println("Car addition to auction complete.");
@@ -77,18 +78,19 @@ public class CarAuction{
     //Bid console-based user interface method.
     public int bidMenuSelect(){
         Scanner scanner = new Scanner(System.in);
+        System.out.println("--------------------------------------");
         System.out.println("Would you like to add bids to the following car?");
         System.out.println("1) Add a Bid.");
         System.out.println("2) Exit.");
         System.out.print("Please select an option: ");
-        int choice = scanner.nextInt();
-        return choice;
+        return scanner.nextInt();
     }
 
     //Display Car method - display cars in carArray;
     public void displayCar(){
         if (carArray.size() > 0) {
             for (int i = 0; i < carArray.size(); i++) {
+                //Get car out from array list to print description.
                 System.out.print("Car (" + (i + 1) + ") ");
                 carArray.get(i).description();
             }

@@ -45,7 +45,6 @@ public class CarAuctionDriver{
         System.out.println("2) Add a car to the Car Auction.");
         System.out.println("3) Exit.");
         System.out.print("Please select an option: ");
-        int choice = scanner.nextInt();
-        return choice;
+        return scanner.nextInt();
     }
 }
