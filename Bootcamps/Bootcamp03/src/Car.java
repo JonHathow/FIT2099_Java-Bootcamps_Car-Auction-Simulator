@@ -12,9 +12,13 @@ public class Car{
     private List<Bid> bids = new ArrayList<>();
 
     //Methods
-    //Add bid
+    //Add bid Mutator
     public void addBid(Client newClient, int newPrice, String newDate){
         bids.add(new Bid(Utils.nextID(), newClient, newPrice, newDate));
+    }
+    //Get bid Accessor
+    public Bid getBid(int index){
+        return bids.get(index);
     }
 
     //Get Car Description

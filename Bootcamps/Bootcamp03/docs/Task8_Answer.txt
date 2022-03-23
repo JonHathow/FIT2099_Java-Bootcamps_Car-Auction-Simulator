@@ -1,1 +1,27 @@
 Task 8
+My solution so Task 8 is to create a Client set.
+
+In Car Auction class, create a new ArrayList to store Client Objects, and call it clientSet.
+This ArrayList, clientSet, will represent a set of Clients, as sets are mathematical structures which contain
+no duplicates.
+
+Create a method in Car Auction class, which is a nested for-loop that will do the following:
+
+1) Iterate through all cars in the cars Arraylist in Car Auction.
+2) For each car, Iterate through the car's respective Bid Arraylist, and get each bid using the bid's getBid accessor.
+3) For each Bid:
+  - Get each bit's respective client using the Client class's getClient accessor.
+  - Check each Client and compare it with the state of the clientSet ArrayList.
+  - If the clientSet Arraylist does not contain the Bid's Client, add the Client to the clientSet ArrayList.
+  - If the Bid's Client already exists in clientSet, then skip it. Essentially, do not add it to the
+    clientSet ArrayList again.
+
+At the end of the nested loop, the clientSet ArrayList should contain a list of all clients which have no duplicates.
+Create another method called printClientSet, which will use a enhanced for-loop to iterate through the clientSet
+ArrayList, and print out a list of all clients. This list should not contain any duplicates.
+
+The following solution aims to fulfil Principle B of the Three Design Principles - Classes Should Be Responsible
+For Their Own Properties, as each class's respective accessors are used to retrieve the necessary information,
+leading up to each Client's information. The following solution also
+aims to fulfil Principle C of the Three Design Principles - Avoid Exclusive Use of Literals, as no fixed values
+are declared and initialized in this solution. Only one ArrayList, the clientSet ArrayList, is declared and used.
