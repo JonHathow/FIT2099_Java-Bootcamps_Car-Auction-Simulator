@@ -12,7 +12,7 @@ public class CarAuctionDriver{
 
         //Take in user input
         do{
-            selection = userMenuSelect();
+            selection = mainMenuSelect();
             switch(selection){
                 case 1:
                     System.out.println("Displaying Car Auction Status . . .");
@@ -21,7 +21,7 @@ public class CarAuctionDriver{
                     System.out.println("-------------------------------------------");
                     break;
                 case 2:
-                    System.out.println("Adding cars . . .");
+                    System.out.println("Adding car . . .");
                     carAuction1.createCars();
                     break;
                 case 3:
@@ -35,14 +35,14 @@ public class CarAuctionDriver{
         System.out.println("Thank you for visiting FIT2099 Car Auction System");
     }
 
-    public static int userMenuSelect(){
+    public static int mainMenuSelect(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("==================================================");
         System.out.println("Welcome to FIT2099 Car Auction Systems");
         System.out.println("==================================================");
         System.out.println("Please enter a number to select an option below:");
         System.out.println("1) Display Car Auction Status.");
-        System.out.println("2) Add 3 Cars to the Car Auction.");
+        System.out.println("2) Add a car to the Car Auction.");
         System.out.println("3) Exit.");
         System.out.print("Please select an option: ");
         int choice = scanner.nextInt();

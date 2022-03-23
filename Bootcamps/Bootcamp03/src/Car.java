@@ -13,7 +13,7 @@ public class Car{
 
     //Methods
     //Add bid
-    public void addBid(Client newClient, int newPrice, Date newDate){
+    public void addBid(Client newClient, int newPrice, String newDate){
         bids.add(new Bid(Utils.nextID(), newClient, newPrice, newDate));
     }
 

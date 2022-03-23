@@ -13,6 +13,8 @@ public class CarAuction{
         String maker;
         String model;
         int modelYear;
+        int selection;
+        int bidQuantity = 0;
 
         //Create car
         System.out.println("--------------------------------------");
@@ -24,22 +26,63 @@ public class CarAuction{
         System.out.print("Please enter a car model year: ");
         modelYear = scanner.nextInt();
         car1.createCar(maker, model, modelYear);
-
-        //Add Bids
-        car1.addBid(new Client(Utils.nextID(), "Lau", "Minely"), 10000,new Date(2022, Calendar.MARCH, 23));
-        carArray.add(car1);
-
         //Closure statement - To assure user that a cas has been added to the car auction.
-        System.out.println("A new Car: " + maker + " " + model + " " + modelYear + " has been added. ");
+        System.out.print("Added a new car : ");
+        car1.description();
         System.out.println("--------------------------------------");
 
-        //Car car2 = new Car();
-        //car2.createCar("Audi", "TT", 2014);
-        //carArray.add(car2);
+        //Add Bids
+        do {
+            selection = bidMenuSelect();
+            switch(selection){
+                case 1:
+                    System.out.println("Adding a bid . . .");
+                    System.out.println("Please enter the details of the client whom is placing the bid.");
 
-        //Car car3 = new Car();
-        //car3.createCar("Chevrolet", "Corvette", 2020);
-        //carArray.add(car3);
+                    //Adding Client
+                    System.out.print("Please enter the Client's First Name: ");
+                    String clientFName = scanner.next();
+                    System.out.print("Please enter the Client's Last Name: ");
+                    String clientLName = scanner.next();
+                    Client client = new Client(Utils.nextID(), clientFName, clientLName);
+
+                    //Adding Bid Price and Bid Date
+                    System.out.println("Welcome Client: " + client.description());
+                    System.out.print("Please enter the Client's preferred Bid Amount: ");
+                    int bidPrice= scanner.nextInt();
+                    System.out.print("Please enter the bid date in the form: day/month/year ");
+                    System.out.print("(Example: 23/03/2022): ");
+                    String bidDate = scanner.next();
+
+                    //Adding bid and client to car.
+                    car1.addBid(client, bidPrice, bidDate);
+                    System.out.println("Bid added.");
+                    bidQuantity++;
+                    break;
+                case 2:
+                    //Exit condition
+                    break;
+                default:
+                    System.out.println("Please select an valid option from the menu.");
+                    break;
+            }
+        } while (selection != 2);
+        System.out.println(bidQuantity + " Bids have been added to the car: " + maker + " " + model + " " + modelYear + ".");
+        carArray.add(car1);
+        System.out.println("Car addition to auction complete for car: ");
+        car1.description();
+        System.out.println("--------------------------------------");
+    }
+
+    //Bid console-based user interface method.
+    public int bidMenuSelect(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Would you like to add bids to the following car?");
+        System.out.println("1) Add a Bid.");
+        System.out.println("2) Exit.");
+        System.out.print("Please select an option: ");
+        int choice = scanner.nextInt();
+        return choice;
     }
 
     //Display Car method - display cars in carArray;

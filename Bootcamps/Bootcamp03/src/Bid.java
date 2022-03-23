@@ -1,16 +1,15 @@
 package Bootcamps.Bootcamp03.src;
-import java.util.Date;
 
 public class Bid {
     //Attributes
     private int bidId;
     private Client client;
     private int bidPrice;
-    private Date bidDate;
+    private String bidDate;
 
     //Methods
     //Constructor
-    public Bid(int newBidId, Client newClient, int newBidPrice, Date newBidDate){
+    public Bid(int newBidId, Client newClient, int newBidPrice, String newBidDate){
         setBidId(newBidId);
         setClient(newClient);
         setBidPrice(newBidPrice);
@@ -30,7 +29,7 @@ public class Bid {
         return bidPrice;
     }
 
-    public Date getBidDate() {
+    public String getBidDate() {
         return bidDate;
     }
 
@@ -47,7 +46,7 @@ public class Bid {
         this.bidPrice = bidPrice;
     }
 
-    public void setBidDate(Date bidDate) {
+    public void setBidDate(String bidDate) {
         this.bidDate = bidDate;
     }
 }
