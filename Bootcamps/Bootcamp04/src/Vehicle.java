@@ -1,9 +1,11 @@
-package Bootcamps.Bootcamp03.src;
+package Bootcamps.Bootcamp04.src;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Car{
+abstract public class Vehicle {
     //Attributes
+    private int vehicleID;
     private String make;
     private String model;
     private int modelYear;
@@ -11,6 +13,21 @@ public class Car{
     private List<Bid> bids = new ArrayList<>();
 
     //Methods
+    //Car Constructors
+    public void Vehicle(String make, String model, int modelYear){
+        setVehicleID(Utils.nextID());
+        setMake(make);
+        setModel(model);
+        setModelYear(modelYear);
+    }
+
+    public void Vehicle(int vehicleId, String make, String model, int modelYear){\
+        setVehicleID(vehicleId);
+        setMake(make);
+        setModel(model);
+        setModelYear(modelYear);
+    }
+
     //Add bid Mutator
     public void addBid(Client newClient, int newPrice, String newDate){
         bids.add(new Bid(Utils.nextID(), newClient, newPrice, newDate));
@@ -36,14 +53,11 @@ public class Car{
         }
     }
 
-    //Car Constructor
-    public void createCar(String make, String model, int modelYear){
-        setMake(make);
-        setModel(model);
-        setModelYear(modelYear);
+    //Getters
+    public int getVehicleID() {
+        return vehicleID;
     }
 
-    //Getters
     public String getMake() {
         return make;
     }
@@ -57,6 +71,9 @@ public class Car{
     }
 
     //Setters
+    public void setVehicleID(int vehicleID) {
+        this.vehicleID = vehicleID;
+    }
     public void setMake(String make) {
         this.make = make;
     }
