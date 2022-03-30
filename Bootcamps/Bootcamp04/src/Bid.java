@@ -3,15 +3,15 @@ package Bootcamps.Bootcamp04.src;
 public class Bid {
     //Attributes
     private int bidId;
-    private Client client;
+    private int clientId;
     private int bidPrice;
     private String bidDate;
 
     //Methods
     //Constructor
-    public Bid(int newBidId, Client newClient, int newBidPrice, String newBidDate){
+    public Bid(int newBidId, int newClientId, int newBidPrice, String newBidDate){
         setBidId(newBidId);
-        setClient(newClient);
+        setClientId(newClientId);
         setBidPrice(newBidPrice);
         setBidDate(newBidDate);
     }
@@ -21,8 +21,8 @@ public class Bid {
         return bidId;
     }
 
-    public Client getClient() {
-        return client;
+    public int getClientId() {
+        return clientId;
     }
 
     public int getBidPrice() {
@@ -38,8 +38,8 @@ public class Bid {
         this.bidId = bidId;
     }
 
-    public void setClient(Client client) {
-        this.client = client;
+    public void setClientId(int clientId) {
+        this.clientId = clientId;
     }
 
     public void setBidPrice(int bidPrice) {
@@ -52,6 +52,6 @@ public class Bid {
 
     //Description Method
     public String description(){
-        return "Bid Id: " + getBidId() + ", Bid Price: " + getBidPrice() + ", Bid Date: " + getBidDate() + ", Bid Client: " + getClient().description();
+        return "Bid Id: " + getBidId() + ", Bid Price: " + getBidPrice() + ", Bid Date: " + getBidDate() + ", Bid Client Id: " + getClientId();
     }
 }

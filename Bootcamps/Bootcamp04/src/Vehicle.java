@@ -21,7 +21,7 @@ abstract public class Vehicle {
         setModelYear(modelYear);
     }
 
-    public void Vehicle(int vehicleId, String make, String model, int modelYear){\
+    public void Vehicle(int vehicleId, String make, String model, int modelYear){
         setVehicleID(vehicleId);
         setMake(make);
         setModel(model);
@@ -29,8 +29,8 @@ abstract public class Vehicle {
     }
 
     //Add bid Mutator
-    public void addBid(Client newClient, int newPrice, String newDate){
-        bids.add(new Bid(Utils.nextID(), newClient, newPrice, newDate));
+    public void addBid(int newClientId, int newPrice, String newDate){
+        bids.add(new Bid(Utils.nextID(), newClientId, newPrice, newDate));
     }
     //Get bid Accessor
     public Bid getBid(int index){
