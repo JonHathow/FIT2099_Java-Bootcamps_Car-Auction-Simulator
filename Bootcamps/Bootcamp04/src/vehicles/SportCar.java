@@ -1,6 +1,8 @@
-package Bootcamps.Bootcamp04.src;
+package Bootcamps.Bootcamp04.src.vehicles;
 
-public class SportCar extends Vehicle{
+import Bootcamps.Bootcamp04.src.vehicles.Vehicle;
+
+public class SportCar extends Vehicle {
     int seats;
     boolean isConvertible;
 

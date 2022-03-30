@@ -1,4 +1,7 @@
-package Bootcamps.Bootcamp04.src;
+package Bootcamps.Bootcamp04.src.vehicles;
+
+import Bootcamps.Bootcamp04.src.bids.Bid;
+import Bootcamps.Bootcamp04.src.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,9 +32,10 @@ abstract public class Vehicle {
     }
 
     //Add bid Mutator
-    public void addBid(int newClientId, int newPrice, String newDate){
-        bids.add(new Bid(Utils.nextID(), newClientId, newPrice, newDate));
+    public void addBid(int clientId, int price, String date){
+        bids.add(new Bid(Utils.nextID(), clientId, price, date));
     }
+
     //Get bid Accessor
     public Bid getBid(int index){
         return bids.get(index);

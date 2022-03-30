@@ -1,6 +1,9 @@
-package Bootcamps.Bootcamp04.src;
+package Bootcamps.Bootcamp04.src.vehicles;
 
-public class CruiserBike extends Vehicle{
+import Bootcamps.Bootcamp04.src.Utils;
+import Bootcamps.Bootcamp04.src.vehicles.Vehicle;
+
+public class CruiserBike extends Vehicle {
 
     CruiserBikeType type;
 
@@ -10,6 +13,7 @@ public class CruiserBike extends Vehicle{
         setMake(make);
         setModel(model);
         setModelYear(modelYear);
+        setType(type);
     }
 
     public void CruiserBike(int vehicleId, String make, String model, int modelYear, CruiserBikeType type){
@@ -27,11 +31,5 @@ public class CruiserBike extends Vehicle{
     //Getter
     public CruiserBikeType getType() {
         return type;
-    }
-
-    //Enum
-    public enum CruiserBikeType{
-        CHOPPER,
-        BOBBER
     }
 }

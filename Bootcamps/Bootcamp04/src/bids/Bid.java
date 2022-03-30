@@ -1,4 +1,4 @@
-package Bootcamps.Bootcamp04.src;
+package Bootcamps.Bootcamp04.src.bids;
 
 public class Bid {
     //Attributes

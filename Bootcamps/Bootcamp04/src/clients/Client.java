@@ -1,4 +1,4 @@
-package Bootcamps.Bootcamp04.src;
+package Bootcamps.Bootcamp04.src.clients;
 
 public class Client {
     //Attributes

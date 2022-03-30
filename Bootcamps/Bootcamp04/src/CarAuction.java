@@ -1,5 +1,8 @@
 package Bootcamps.Bootcamp04.src;
 
+import Bootcamps.Bootcamp04.src.clients.Client;
+import Bootcamps.Bootcamp04.src.vehicles.Vehicle;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

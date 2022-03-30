@@ -1,10 +1,13 @@
-package Bootcamps.Bootcamp04.src;
+package Bootcamps.Bootcamp04.src.bids;
+
+import Bootcamps.Bootcamp04.src.Utils;
+import Bootcamps.Bootcamp04.src.bids.Bid;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class BidsManager {
-    Map<Integer,Bid> bids = new HashMap<Integer, Bid>();
+    Map<Integer, Bid> bids = new HashMap<Integer, Bid>();
 
     //Setters
     //Add Bid Method
