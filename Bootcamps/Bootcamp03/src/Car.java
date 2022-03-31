@@ -20,7 +20,7 @@ public class Car{
         return bids.get(index);
     }
 
-    //Get Car Description
+    //Get Car Description Method
     public void description(){
         //Car description
         System.out.println("MY"+ getModelYear() + " " + getMake() + " " + getModel());
