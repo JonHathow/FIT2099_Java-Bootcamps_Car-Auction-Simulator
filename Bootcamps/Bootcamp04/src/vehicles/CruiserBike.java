@@ -8,7 +8,7 @@ public class CruiserBike extends Vehicle {
     CruiserBikeType type;
 
     //Constructor
-    public void CruiserBike(String make, String model, int modelYear, CruiserBikeType type){
+    public CruiserBike(String make, String model, int modelYear, CruiserBikeType type){
         setVehicleID(Utils.nextID());
         setMake(make);
         setModel(model);
@@ -16,11 +16,18 @@ public class CruiserBike extends Vehicle {
         setType(type);
     }
 
-    public void CruiserBike(int vehicleId, String make, String model, int modelYear, CruiserBikeType type){
+    public CruiserBike(int vehicleId, String make, String model, int modelYear, CruiserBikeType type){
         setVehicleID(vehicleId);
         setMake(make);
         setModel(model);
         setModelYear(modelYear);
+    }
+
+    //Description Method
+    @Override
+    public void description(){
+        //Bike description
+        System.out.println("MY"+ getModelYear() + " " + getMake() + " " + getModel() + "Type: " + getType());
     }
 
     //Setter

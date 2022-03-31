@@ -2,6 +2,7 @@ package Bootcamps.Bootcamp04.src.vehicles;
 
 import Bootcamps.Bootcamp04.src.bids.Bid;
 import Bootcamps.Bootcamp04.src.Utils;
+import Bootcamps.Bootcamp04.src.bids.BidsManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +14,7 @@ abstract public class Vehicle {
     private String model;
     private int modelYear;
     //Bids
-    private List<Bid> bids = new ArrayList<>();
+    private BidsManager bidsManager = new BidsManager();
 
     //Methods
     //Car Constructors
@@ -33,28 +34,18 @@ abstract public class Vehicle {
 
     //Add bid Mutator
     public void addBid(int clientId, int price, String date){
-        bids.add(new Bid(Utils.nextID(), clientId, price, date));
+        bidsManager.addBid(clientId, price, date);
     }
 
     //Get bid Accessor
-    public Bid getBid(int index){
-        return bids.get(index);
+    public Bid getBid(int clientId){
+        return bidsManager.getBid(clientId);
     }
 
     //Get Car Description
     public void description(){
         //Car description
         System.out.println("MY"+ getModelYear() + " " + getMake() + " " + getModel());
-        System.out.println("Bids: ");
-
-        //Bids and Clients description.
-        if (bids.size() > 0){
-            for (Bid bid:bids) {
-                System.out.println(bid.description());
-            }
-        } else {
-            System.out.println("None");
-        }
     }
 
     //Getters
@@ -78,6 +69,7 @@ abstract public class Vehicle {
     public void setVehicleID(int vehicleID) {
         this.vehicleID = vehicleID;
     }
+
     public void setMake(String make) {
         this.make = make;
     }

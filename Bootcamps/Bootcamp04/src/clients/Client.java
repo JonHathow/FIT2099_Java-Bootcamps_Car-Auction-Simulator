@@ -44,7 +44,7 @@ public class Client {
         return lastName;
     }
 
-    //Client String Method
+    //Description Method
     public String description(){
         return getClientId() + " " + getFirstName() + " " + getLastName();
     }
