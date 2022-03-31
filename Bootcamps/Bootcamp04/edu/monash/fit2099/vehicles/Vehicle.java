@@ -1,11 +1,8 @@
-package Bootcamps.Bootcamp04.src.vehicles;
+package Bootcamps.Bootcamp04.edu.monash.fit2099.vehicles;
 
-import Bootcamps.Bootcamp04.src.bids.Bid;
-import Bootcamps.Bootcamp04.src.Utils;
-import Bootcamps.Bootcamp04.src.bids.BidsManager;
-
-import java.util.ArrayList;
-import java.util.List;
+import Bootcamps.Bootcamp04.edu.monash.fit2099.Utils;
+import Bootcamps.Bootcamp04.edu.monash.fit2099.bids.Bid;
+import Bootcamps.Bootcamp04.edu.monash.fit2099.bids.BidsManager;
 
 abstract public class Vehicle {
     //Attributes
@@ -17,15 +14,15 @@ abstract public class Vehicle {
     private BidsManager bidsManager = new BidsManager();
 
     //Methods
-    //Car Constructors
-    public void Vehicle(String make, String model, int modelYear){
+    //Vehicle Constructors
+    public Vehicle(String make, String model, int modelYear){
         setVehicleID(Utils.nextID());
         setMake(make);
         setModel(model);
         setModelYear(modelYear);
     }
 
-    public void Vehicle(int vehicleId, String make, String model, int modelYear){
+    public Vehicle(int vehicleId, String make, String model, int modelYear){
         setVehicleID(vehicleId);
         setMake(make);
         setModel(model);

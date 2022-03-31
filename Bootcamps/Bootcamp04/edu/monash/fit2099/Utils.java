@@ -1,4 +1,4 @@
-package Bootcamps.Bootcamp04.src;
+package Bootcamps.Bootcamp04.edu.monash.fit2099;
 import java.util.Random;
 
 public class Utils {

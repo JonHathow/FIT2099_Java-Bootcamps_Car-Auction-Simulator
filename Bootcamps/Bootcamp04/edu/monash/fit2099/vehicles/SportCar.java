@@ -1,6 +1,6 @@
-package Bootcamps.Bootcamp04.src.vehicles;
+package Bootcamps.Bootcamp04.edu.monash.fit2099.vehicles;
 
-import Bootcamps.Bootcamp04.src.vehicles.Vehicle;
+import Bootcamps.Bootcamp03.src.Utils;
 
 public class SportCar extends Vehicle {
     private int seats;
@@ -8,20 +8,18 @@ public class SportCar extends Vehicle {
 
     //Constructors
     public SportCar(String make, String model, int modelYear, int seats, boolean isConvertible){
-        setMake(make);
-        setModel(model);
-        setModelYear(modelYear);
+        super(make, model, modelYear);
+        setSeats(seats);
+        setIsConvertible(isConvertible);
     }
 
     public SportCar(int vehicleId, String make, String model, int modelYear, int seats, boolean isConvertible){
-        setVehicleID(vehicleId);
-        setMake(make);
-        setModel(model);
-        setModelYear(modelYear);
+        super(vehicleId, make, model, modelYear);
+        setSeats(seats);
+        setIsConvertible(isConvertible);
     }
 
     //Description Method
-    @Override
     public void description(){
         //Car description
         System.out.println("MY"+ getModelYear() + " " + getMake() + " " + getModel() + "Seats: " + getSeats() + " Is Convertible: " + getIsConvertible());

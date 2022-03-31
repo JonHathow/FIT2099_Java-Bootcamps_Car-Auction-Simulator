@@ -1,7 +1,10 @@
-package Bootcamps.Bootcamp04.src;
+package Bootcamps.Bootcamp04.edu.monash.fit2099;
 
-import Bootcamps.Bootcamp04.src.clients.Client;
-import Bootcamps.Bootcamp04.src.vehicles.*;
+import Bootcamps.Bootcamp04.edu.monash.fit2099.clients.Client;
+import Bootcamps.Bootcamp04.edu.monash.fit2099.vehicles.CruiserBike;
+import Bootcamps.Bootcamp04.edu.monash.fit2099.vehicles.CruiserBikeType;
+import Bootcamps.Bootcamp04.edu.monash.fit2099.vehicles.SportCar;
+import Bootcamps.Bootcamp04.edu.monash.fit2099.vehicles.Vehicle;
 
 import java.util.ArrayList;
 import java.util.List;

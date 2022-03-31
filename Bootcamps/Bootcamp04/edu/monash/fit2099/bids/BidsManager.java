@@ -1,7 +1,6 @@
-package Bootcamps.Bootcamp04.src.bids;
+package Bootcamps.Bootcamp04.edu.monash.fit2099.bids;
 
-import Bootcamps.Bootcamp04.src.Utils;
-import Bootcamps.Bootcamp04.src.bids.Bid;
+import Bootcamps.Bootcamp04.edu.monash.fit2099.Utils;
 
 import java.util.HashMap;
 import java.util.Map;

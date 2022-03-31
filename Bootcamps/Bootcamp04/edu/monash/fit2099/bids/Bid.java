@@ -1,4 +1,4 @@
-package Bootcamps.Bootcamp04.src.bids;
+package Bootcamps.Bootcamp04.edu.monash.fit2099.bids;
 
 public class Bid {
     //Attributes

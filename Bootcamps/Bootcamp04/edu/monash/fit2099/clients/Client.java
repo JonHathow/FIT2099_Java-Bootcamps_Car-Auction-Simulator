@@ -1,4 +1,4 @@
-package Bootcamps.Bootcamp04.src.clients;
+package Bootcamps.Bootcamp04.edu.monash.fit2099.clients;
 
 public class Client {
     //Attributes

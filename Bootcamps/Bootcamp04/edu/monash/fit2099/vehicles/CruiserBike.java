@@ -1,7 +1,6 @@
-package Bootcamps.Bootcamp04.src.vehicles;
+package Bootcamps.Bootcamp04.edu.monash.fit2099.vehicles;
 
-import Bootcamps.Bootcamp04.src.Utils;
-import Bootcamps.Bootcamp04.src.vehicles.Vehicle;
+import Bootcamps.Bootcamp04.edu.monash.fit2099.Utils;
 
 public class CruiserBike extends Vehicle {
 
@@ -9,22 +8,16 @@ public class CruiserBike extends Vehicle {
 
     //Constructor
     public CruiserBike(String make, String model, int modelYear, CruiserBikeType type){
-        setVehicleID(Utils.nextID());
-        setMake(make);
-        setModel(model);
-        setModelYear(modelYear);
+        super(make, model, modelYear);
         setType(type);
     }
 
     public CruiserBike(int vehicleId, String make, String model, int modelYear, CruiserBikeType type){
-        setVehicleID(vehicleId);
-        setMake(make);
-        setModel(model);
-        setModelYear(modelYear);
+        super(vehicleId, make, model, modelYear);
+        setType(type);
     }
 
     //Description Method
-    @Override
     public void description(){
         //Bike description
         System.out.println("MY"+ getModelYear() + " " + getMake() + " " + getModel() + "Type: " + getType());
