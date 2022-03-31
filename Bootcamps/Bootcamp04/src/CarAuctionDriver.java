@@ -6,44 +6,55 @@ public class CarAuctionDriver{
     //Main
     public static void main(String[] args) {
         int selection;
-        CarAuction carAuction1 = new CarAuction();
-        //carAuction1.createCars();
-        //carAuction1.displayCar();
+        CarAuction carAuction = new CarAuction();
 
-        //Take in user input
+        //Handle user input
         do{
             selection = mainMenuSelect();
             switch(selection){
                 case 1:
-                    System.out.println("Displaying Car Auction Status . . .");
-                    System.out.println("-------------------------------------------");
-                    carAuction1.printStatus();
-                    System.out.println("-------------------------------------------");
+                    carAuction.createSportsCars();
                     break;
                 case 2:
-                    System.out.println("Adding car . . .");
-                    carAuction1.createCars();
+                    carAuction.createCruiserBike();
                     break;
                 case 3:
+                    carAuction.displayFleet();
+                    break;
+                case 4:
+                    carAuction.createClient();
+                    break;
+                case 5:
+                    carAuction.displayClients();
+                    break;
+                case 6:
+                    carAuction.createBid();
+                    break;
+                case 7:
                     //Exit option.
                     break;
                 default:
                     System.out.println("Please select an valid option from the menu.");
                     break;
             }
-        }while(selection != 3);
+        }while(selection != 7);
         System.out.println("Thank you for visiting FIT2099 Car Auction System");
     }
 
+    //Method to print menu
     public static int mainMenuSelect(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("==================================================");
-        System.out.println("Welcome to FIT2099 Car Auction Systems");
-        System.out.println("==================================================");
-        System.out.println("Please enter a number to select an option below:");
-        System.out.println("1) Display Car Auction Status.");
-        System.out.println("2) Add a car to the Car Auction.");
-        System.out.println("3) Exit.");
+        System.out.println("+----------------------------------+");
+        System.out.println("|        Welcome to Bootcamp       |");
+        System.out.println("|             Week 4               |");
+        System.out.println("+----------------------------------+");
+        System.out.println("1) New Sport Car");
+        System.out.println("2) New Cruiser Bike");
+        System.out.println("3) Display Fleet");
+        System.out.println("4) Add Client");
+        System.out.println("5) List Clients");
+        System.out.println("6) Add Bid");
+        System.out.println("7) Exit");
         System.out.print("Please select an option: ");
         return scanner.nextInt();
     }

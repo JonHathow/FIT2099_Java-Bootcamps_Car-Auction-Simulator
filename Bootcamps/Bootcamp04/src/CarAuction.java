@@ -2,7 +2,6 @@ package Bootcamps.Bootcamp04.src;
 
 import Bootcamps.Bootcamp04.src.clients.Client;
 import Bootcamps.Bootcamp04.src.vehicles.*;
-import Bootcamps.Bootcamp04.src.bids.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,7 +73,7 @@ public class CarAuction{
         vehicleArray.add(cruiserBike);
 
         //Closure statement for Cruiser Bike
-        System.out.println("Added a new sports car : " + maker + " " + model + " " + modelYear);
+        System.out.println("Added a new cruise bike : " + maker + " " + model + " " + modelYear);
 
     }
 
@@ -106,27 +105,35 @@ public class CarAuction{
         int clientId;
         int bidPrice;
         String bidDate;
+        boolean foundFlag = false;
 
-        //Add Bid
+        //Identify Vehicle and check if vehicle exists in array.
         System.out.print("Please enter the Vehicle Id of the vehicle the bid will be placed on: ");
         vehicleId = scanner.nextInt();
-        System.out.print("Please enter the Client Id number of the client who is placing the bid: ");
-        clientId = scanner.nextInt();
-        System.out.print("Please enter the bid price: ");
-        bidPrice= scanner.nextInt();
-        System.out.print("Please enter the bid date in the form: day/month/year ");
-        System.out.print("(Example: 23/03/2022): ");
-        bidDate = scanner.next();
 
         //Search Car Array
         for(Vehicle vehicle:vehicleArray){
             if (vehicle.getVehicleID() == vehicleId){
+                System.out.print("Please enter the Client Id number of the client who is placing the bid: ");
+                clientId = scanner.nextInt();
+                System.out.print("Please enter the bid price: ");
+                bidPrice= scanner.nextInt();
+                System.out.print("Please enter the bid date in the form: day/month/year ");
+                System.out.print("(Example: 23/03/2022): ");
+                bidDate = scanner.next();
                 vehicle.addBid(clientId,bidPrice,bidDate);
+
+                //Closure statement for Bid
+                System.out.println("Added a new bid of : " + bidPrice + " from client number: " + clientId + " to vehicle number: " + vehicleId);
+                foundFlag = true;
+                break;
             }
         }
 
-        //Closure statement for Bid
-        System.out.println("Added a new bid of : " + bidPrice + "from client number:" + clientId + " to vehicle number: " + vehicleId);
+        if (!foundFlag){
+            System.out.println("Vehicle of Id: " + vehicleId + " is currently is not in the auction");
+            System.out.println("Unable to place bid.");
+        }
     }
 
     //Display Car method - display cars in carArray
