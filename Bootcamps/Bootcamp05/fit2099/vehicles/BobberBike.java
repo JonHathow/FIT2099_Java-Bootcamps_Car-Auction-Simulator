@@ -14,6 +14,6 @@ public class BobberBike extends Vehicle {
     //Description Method
     public void description(){
         //Bike description
-        System.out.println("MY"+ getModelYear() + " " + getMake() + " " + getModel() + "Type: ");
+        System.out.println("MY"+ getModelYear() + " " + getMake() + " " + getModel());
     }
 }

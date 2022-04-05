@@ -1,6 +1,7 @@
 package Bootcamps.Bootcamp05.fit2099;
 
 import Bootcamps.Bootcamp05.fit2099.clients.Client;
+import Bootcamps.Bootcamp05.fit2099.vehicles.BobberBike;
 import Bootcamps.Bootcamp05.fit2099.vehicles.ChopperBike;
 import Bootcamps.Bootcamp05.fit2099.vehicles.SportCar;
 import Bootcamps.Bootcamp05.fit2099.vehicles.Vehicle;
@@ -58,15 +59,20 @@ public class CarAuction{
     }
 
     //Create Cruiser Bike Method - Chopper or Bobber Bike
-    public void createCruiserBike() {
+    /**
+     * The method createCruiserBike takes in bike properties from the
+     * user via console io, creates a new Chopper Bike from those properties, and
+     * adds it to the vehicleArray in the car auction.
+     */
+    public void createChopperBike() {
         int vehicleId;
         String maker;
         String model;
         int modelYear;
 
-        //Create SportsCar
+        //Create Chopper Bike
         System.out.println("--------------------------------------");
-        System.out.println("Adding a new CruiserBike to the auction.");
+        System.out.println("Adding a new ChopperBike to the auction.");
         System.out.print("Please enter a bike Id: ");
         vehicleId = scanner.nextInt();
         System.out.print("Please enter a bike maker: ");
@@ -78,9 +84,37 @@ public class CarAuction{
         ChopperBike chopperBike = new ChopperBike(vehicleId, maker, model, modelYear);
         vehicleArray.add(chopperBike);
 
-        //Closure statement for Cruiser Bike
-        System.out.println("Added a new cruise bike : " + maker + " " + model + " " + modelYear);
+        //Closure statement for Chopper Bike
+        System.out.println("Added a new chopper bike : " + maker + " " + model + " " + modelYear);
+    }
 
+    /**
+     * The method createCruiserBike takes in bike properties from the
+     * user via console io, creates a new Bobber Bike from those properties, and
+     * adds it to the vehicleArray in the car auction.
+     */
+    public void createBobberBike() {
+        int vehicleId;
+        String maker;
+        String model;
+        int modelYear;
+
+        //Create Bobber Bike
+        System.out.println("--------------------------------------");
+        System.out.println("Adding a new BobberBike to the auction.");
+        System.out.print("Please enter a bike Id: ");
+        vehicleId = scanner.nextInt();
+        System.out.print("Please enter a bike maker: ");
+        maker = scanner.next();
+        System.out.print("Please enter a bike model: ");
+        model = scanner.next();
+        System.out.print("Please enter a bike model year: ");
+        modelYear = scanner.nextInt();
+        BobberBike bobberBike = new BobberBike(vehicleId, maker, model, modelYear);
+        vehicleArray.add(bobberBike);
+
+        //Closure statement for Bobber Bike
+        System.out.println("Added a new Bobber bike : " + maker + " " + model + " " + modelYear);
     }
 
     //Create Client Method

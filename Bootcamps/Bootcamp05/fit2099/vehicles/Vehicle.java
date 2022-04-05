@@ -20,6 +20,7 @@ abstract public class Vehicle {
         setMake(make);
         setModel(model);
         setModelYear(modelYear);
+
     }
 
     public Vehicle(int vehicleId, String make, String model, int modelYear){

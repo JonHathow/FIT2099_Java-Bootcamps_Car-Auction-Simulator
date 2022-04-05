@@ -1,4 +1,4 @@
-package Bootcamps.Bootcamp05.fit2099;
+package Bootcamps.Bootcamp05.fit2099.taxation;
 
 /**
  * TaxableVehicle is an interface that defines the behaviour for vehicles in the car auction
@@ -12,7 +12,14 @@ public interface TaxableVehicle {
 
     /**
      * A method to calculate the tax rate of the vehicle.
-     * @param price the Price of the vehicle.
+     * @param price the price of the vehicle.
      */
     public double calculateTaxRate(double price);
+
+    /**
+     * Default method to add a taxable vehicle to Taxation Manager arraylist.
+     */
+    default void addToTaxationManager(){
+        TaxationManager.getInstance().appendTaxableItem(this);
+    }
 }

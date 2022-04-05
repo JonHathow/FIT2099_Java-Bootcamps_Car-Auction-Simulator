@@ -1,6 +1,6 @@
 package Bootcamps.Bootcamp05.fit2099.vehicles;
 
-import Bootcamps.Bootcamp05.fit2099.TaxableVehicle;
+import Bootcamps.Bootcamp05.fit2099.taxation.TaxableVehicle;
 
 public class SportCar extends Vehicle implements TaxableVehicle {
     private int seats;
@@ -11,12 +11,14 @@ public class SportCar extends Vehicle implements TaxableVehicle {
         super(make, model, modelYear);
         setSeats(seats);
         setIsConvertible(isConvertible);
+        this.addToTaxationManager();
     }
 
     public SportCar(int vehicleId, String make, String model, int modelYear, int seats, boolean isConvertible){
         super(vehicleId, make, model, modelYear);
         setSeats(seats);
         setIsConvertible(isConvertible);
+        this.addToTaxationManager();
     }
 
     //Description Method

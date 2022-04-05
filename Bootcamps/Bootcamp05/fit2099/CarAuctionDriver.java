@@ -24,28 +24,31 @@ public class CarAuctionDriver{
                     carAuction.createSportsCars();
                     break;
                 case 2:
-                    carAuction.createCruiserBike();
+                    carAuction.createChopperBike();
                     break;
                 case 3:
-                    carAuction.displayFleet();
+                    carAuction.createBobberBike();
                     break;
                 case 4:
-                    carAuction.createClient();
+                    carAuction.displayFleet();
                     break;
                 case 5:
-                    carAuction.displayClients();
+                    carAuction.createClient();
                     break;
                 case 6:
-                    carAuction.createBid();
+                    carAuction.displayClients();
                     break;
                 case 7:
+                    carAuction.createBid();
+                    break;
+                case 8:
                     //Exit option.
                     break;
                 default:
                     System.out.println("Please select an valid option from the menu.");
                     break;
             }
-        }while(selection != 7);
+        }while(selection != 8);
         System.out.println("Thank you for visiting FIT2099 Car Auction System");
     }
 
@@ -57,12 +60,13 @@ public class CarAuctionDriver{
         System.out.println("|             Week 4               |");
         System.out.println("+----------------------------------+");
         System.out.println("1) New Sport Car");
-        System.out.println("2) New Cruiser Bike");
-        System.out.println("3) Display Fleet");
-        System.out.println("4) Add Client");
-        System.out.println("5) List Clients");
-        System.out.println("6) Add Bid");
-        System.out.println("7) Exit");
+        System.out.println("2) New Chopper Bike");
+        System.out.println("3) New Bobber Bike");
+        System.out.println("4) Display Fleet");
+        System.out.println("5) Add Client");
+        System.out.println("6) List Clients");
+        System.out.println("7) Add Bid");
+        System.out.println("8) Exit");
         System.out.print("Please select an option: ");
         return scanner.nextInt();
     }
