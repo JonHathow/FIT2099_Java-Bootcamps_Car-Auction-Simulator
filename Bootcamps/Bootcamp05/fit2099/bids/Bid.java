@@ -9,7 +9,7 @@ public class Bid {
 
     //Methods
     //Constructor
-    public Bid(int newBidId, int newClientId, int newBidPrice, String newBidDate){
+    public Bid(int newBidId, int newClientId, int newBidPrice, String newBidDate) {
         setBidId(newBidId);
         setClientId(newClientId);
         setBidPrice(newBidPrice);
@@ -51,7 +51,7 @@ public class Bid {
     }
 
     //Description Method
-    public String description(){
-        return "Bid Id: " + getBidId() + ", Bid Price: " + getBidPrice() + ", Bid Date: " + getBidDate() + ", Bid Client Id: " + getClientId();
+    public String description() {
+        return "Id=" + getBidId() + ", buyerId=" + getClientId() + ", price=" + getBidPrice() + ", date=" + getBidDate();
     }
 }

@@ -1,6 +1,7 @@
 package Bootcamps.Bootcamp05.fit2099;
 
 import Bootcamps.Bootcamp05.fit2099.clients.Client;
+import Bootcamps.Bootcamp05.fit2099.taxation.TaxationManager;
 import Bootcamps.Bootcamp05.fit2099.vehicles.BobberBike;
 import Bootcamps.Bootcamp05.fit2099.vehicles.ChopperBike;
 import Bootcamps.Bootcamp05.fit2099.vehicles.SportCar;
@@ -145,14 +146,20 @@ public class CarAuction{
         int clientId;
         int bidPrice;
         String bidDate;
+        double tax = 0.00;
+        String vehicleStr;
+        String bidStr;
         boolean foundFlag = false;
 
-        //Identify Vehicle and check if vehicle exists in array.
+        //Get identification (id) of vehicle for checking.
         System.out.print("Please enter the Vehicle Id of the vehicle the bid will be placed on: ");
         vehicleId = scanner.nextInt();
 
-        //Search Car Array
+        //Search Car Array and add bid to a car if it exists in the car auction vehicle arraylist.
+        //How to check subclass from superclass instance
+        //Reference: https://stackoverflow.com/questions/46210273/how-to-get-the-objects-from-superclass-to-subclass-in-java
         for(Vehicle vehicle:vehicleArray){
+            //If the car exists, add the corresponding bid to it.
             if (vehicle.getVehicleID() == vehicleId){
                 System.out.print("Please enter the Client Id number of the client who is placing the bid: ");
                 clientId = scanner.nextInt();
@@ -166,10 +173,28 @@ public class CarAuction{
                 //Closure statement for Bid
                 System.out.println("Added a new bid of : " + bidPrice + " from client number: " + clientId + " to vehicle number: " + vehicleId);
                 foundFlag = true;
+
+                //Calculate Tax
+                vehicleStr = "Bid for Vehicle: " + vehicle.getVehicleID() + "| MY" + vehicle.getModelYear() + "|" + vehicle.getMake() + "|" + vehicle.getModel() + "|";
+                bidStr = "{0={" + vehicle.getBid(clientId).description() + "}}";
+                if (TaxationManager.getInstance().getTaxableVehicles().contains(vehicle)) {
+                    if (vehicle instanceof SportCar) {
+                        tax = ((SportCar) vehicle).calculateTaxRate(bidPrice);
+                    }
+                    if (vehicle instanceof ChopperBike) {
+                        tax = ((ChopperBike) vehicle).calculateTaxRate(bidPrice);
+                    }
+                    System.out.println(vehicleStr + bidStr + " Price: " + bidPrice + " Tax: " + tax);
+                } else {
+                    System.out.println(vehicleStr + bidStr + " Price: " + bidPrice + " Tax: NO TAX");
+                }
+
                 break;
             }
         }
 
+        //Handles bids that are placed on a vehicle that does not exist in the car auction
+        //vehicle arraylist.
         if (!foundFlag){
             System.out.println("Vehicle of Id: " + vehicleId + " is currently is not in the auction");
             System.out.println("Unable to place bid.");
@@ -194,8 +219,7 @@ public class CarAuction{
         if (clientArray.size() > 0) {
             for (int i = 0; i < clientArray.size(); i++) {
                 //Get client out from array list to print description.
-                System.out.print("Client (" + (i + 1) + ") ");
-                clientArray.get(i).description();
+                System.out.println("Client (" + (i + 1) + ") " + clientArray.get(i).description());
             }
         } else {
             System.out.println("There are no clients participating in auction now.");

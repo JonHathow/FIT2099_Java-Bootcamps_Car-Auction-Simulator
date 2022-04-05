@@ -24,7 +24,7 @@ public class SportCar extends Vehicle implements TaxableVehicle {
     //Description Method
     public void description(){
         //Car description
-        System.out.println("MY"+ getModelYear() + " " + getMake() + " " + getModel() + "Seats: " + getSeats() + " Is Convertible: " + getIsConvertible());
+        System.out.println("MY"+ getModelYear() + " " + getMake() + " " + getModel() + " Seats: " + getSeats() + " Is Convertible: " + getIsConvertible());
     }
 
     //Calculate Tax Method
