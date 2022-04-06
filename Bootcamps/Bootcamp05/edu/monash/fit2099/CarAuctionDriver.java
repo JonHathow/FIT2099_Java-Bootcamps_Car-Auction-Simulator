@@ -1,4 +1,4 @@
-package Bootcamps.Bootcamp05.fit2099;
+package Bootcamps.Bootcamp05.edu.monash.fit2099;
 
 import java.util.Scanner;
 

@@ -1,6 +1,6 @@
-package Bootcamps.Bootcamp05.fit2099.taxation;
+package Bootcamps.Bootcamp05.edu.monash.fit2099.taxation;
 
-import Bootcamps.Bootcamp05.fit2099.vehicles.Vehicle;
+import Bootcamps.Bootcamp05.edu.monash.fit2099.vehicles.Vehicle;
 
 import java.util.ArrayList;
 

@@ -1,6 +1,6 @@
-package Bootcamps.Bootcamp05.fit2099.vehicles;
+package Bootcamps.Bootcamp05.edu.monash.fit2099.vehicles;
 
-import Bootcamps.Bootcamp05.fit2099.taxation.TaxableVehicle;
+import Bootcamps.Bootcamp05.edu.monash.fit2099.taxation.TaxableVehicle;
 
 public class SportCar extends Vehicle implements TaxableVehicle {
     private int seats;

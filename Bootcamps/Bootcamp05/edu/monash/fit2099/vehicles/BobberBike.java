@@ -1,4 +1,4 @@
-package Bootcamps.Bootcamp05.fit2099.vehicles;
+package Bootcamps.Bootcamp05.edu.monash.fit2099.vehicles;
 
 public class BobberBike extends Vehicle {
 

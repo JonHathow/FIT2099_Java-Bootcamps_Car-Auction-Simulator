@@ -1,11 +1,11 @@
-package Bootcamps.Bootcamp05.fit2099;
+package Bootcamps.Bootcamp05.edu.monash.fit2099;
 
-import Bootcamps.Bootcamp05.fit2099.clients.Client;
-import Bootcamps.Bootcamp05.fit2099.taxation.TaxationManager;
-import Bootcamps.Bootcamp05.fit2099.vehicles.BobberBike;
-import Bootcamps.Bootcamp05.fit2099.vehicles.ChopperBike;
-import Bootcamps.Bootcamp05.fit2099.vehicles.SportCar;
-import Bootcamps.Bootcamp05.fit2099.vehicles.Vehicle;
+import Bootcamps.Bootcamp05.edu.monash.fit2099.clients.Client;
+import Bootcamps.Bootcamp05.edu.monash.fit2099.taxation.TaxationManager;
+import Bootcamps.Bootcamp05.edu.monash.fit2099.vehicles.BobberBike;
+import Bootcamps.Bootcamp05.edu.monash.fit2099.vehicles.ChopperBike;
+import Bootcamps.Bootcamp05.edu.monash.fit2099.vehicles.SportCar;
+import Bootcamps.Bootcamp05.edu.monash.fit2099.vehicles.Vehicle;
 
 import java.util.ArrayList;
 import java.util.List;

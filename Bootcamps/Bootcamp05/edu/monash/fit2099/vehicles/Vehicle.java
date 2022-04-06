@@ -1,8 +1,8 @@
-package Bootcamps.Bootcamp05.fit2099.vehicles;
+package Bootcamps.Bootcamp05.edu.monash.fit2099.vehicles;
 
-import Bootcamps.Bootcamp05.fit2099.Utils;
-import Bootcamps.Bootcamp05.fit2099.bids.Bid;
-import Bootcamps.Bootcamp05.fit2099.bids.BidsManager;
+import Bootcamps.Bootcamp05.edu.monash.fit2099.Utils;
+import Bootcamps.Bootcamp05.edu.monash.fit2099.bids.Bid;
+import Bootcamps.Bootcamp05.edu.monash.fit2099.bids.BidsManager;
 
 abstract public class Vehicle {
     //Attributes

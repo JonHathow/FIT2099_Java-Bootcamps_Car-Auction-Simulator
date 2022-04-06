@@ -1,4 +1,4 @@
-package Bootcamps.Bootcamp05.fit2099.taxation;
+package Bootcamps.Bootcamp05.edu.monash.fit2099.taxation;
 
 /**
  * TaxableVehicle is an interface that defines the behaviour for vehicles in the car auction
