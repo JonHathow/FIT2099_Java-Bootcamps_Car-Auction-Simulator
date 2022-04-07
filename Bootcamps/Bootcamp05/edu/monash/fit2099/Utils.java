@@ -9,6 +9,10 @@ import java.util.Random;
  * @version 1.0.0
  */
 public class Utils {
+    /**
+     * Static method nextId which generates a random Id number.
+     * @return a random Id number.
+     */
     public static int nextID() {
         Random r = new Random();
         int low = 10000;

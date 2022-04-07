@@ -1,8 +1,8 @@
 package Bootcamps.Bootcamp05.edu.monash.fit2099.clients;
 
 /**
- * The Client class handles the creation and operations of all clients which participate
- * in the car auction.
+ * The Client class handles the creation, characteristics and
+ * behaviour of all clients which participate in the car auction.
  *
  * This is version 5 of this class, as it is from Week 5's Bootcamp.
  *
@@ -11,8 +11,19 @@ package Bootcamps.Bootcamp05.edu.monash.fit2099.clients;
  */
 public class Client {
     //Attributes
+    /**
+     * The client Id number.
+     */
     private int clientId;
+
+    /**
+     * The first name of the client.
+     */
     private String firstName;
+
+    /**
+     * The last name of the client.
+     */
     private String lastName;
 
     //Methods
