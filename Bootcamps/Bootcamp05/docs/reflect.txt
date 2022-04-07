@@ -1,1 +1,22 @@
 Reflection on the Pros an Cons of using Throwing Exceptions vs Static Factory Method
+
+An advantage of Static Factory Methods is that they have names whilst constructors do not,
+thus they are easier to reference. They are also easier to instantiate as they do not require
+the creation of an object each time the method is called. They can also return a object of any
+subtype to their return type, which means that it can return a valid object, otherwise it returns
+null without crashing the program. However, Static Factory methods also do not prevent the
+program from crashing if an invalid object (null) is improperly referenced if not handled.
+For example, a static factory method that returns a null object as invalid to an ArrayList
+causes a NullPointerException if the invalid null object is referenced.
+Also, static factory methods without good naming convention could make it difficult to
+identify which class it belongs to. Thus, it is easier to use, but has some capability
+limitations.
+
+The advantages of Assertions and Exceptions is that they allow the code to handle errors
+without crashing the program, otherwise if they cannot prevent a crash, they can still display
+a meaningful error message to the user. However, sometimes the stack trace that is printed when
+an assertion is thrown can be lengthy and tedious to read. Also, each method would require
+it's respective assertion and exception code, making coding and debugging tedious as have to
+code assertions and exceptions multiple times for each method (getters, setters, etc.). Thus,
+the creation and use could become repetitive. Assertions and Exceptions have powerful capability,
+but not optimal ease of usage.

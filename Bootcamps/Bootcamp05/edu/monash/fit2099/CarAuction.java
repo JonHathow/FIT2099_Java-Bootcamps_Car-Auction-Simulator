@@ -44,8 +44,9 @@ public class CarAuction{
      * user via console io, creates a new Sport Car from those properties, and
      * adds it to the vehicleArray in the car auction.
      * Used to add a new Sport Car to the car auction.
+     * @throws Exception when sports car maker, model, modelYear, or seats are entered incorrectly.
      */
-    public void createSportsCars() {
+    public void createSportsCars() throws Exception {
         int vehicleId;
         String maker;
         String model;
@@ -68,8 +69,16 @@ public class CarAuction{
         seats = scanner.nextInt();
         System.out.print("Please state if the car is convertible (true if yes, false is no): ");
         isConvertible = scanner.nextBoolean();
-        SportCar sportCar = new SportCar(vehicleId, maker, model, modelYear, seats, isConvertible);
-        vehicleArray.add(sportCar);
+
+        try {
+            SportCar sportCar = new SportCar(vehicleId, maker, model, modelYear, seats, isConvertible);
+            vehicleArray.add(sportCar);
+            System.out.println(sportCar);
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
 
         //Closure statement - To assure user that a new Sports Car has been added to the car auction.
         System.out.println("Added a new sports car : " + maker + " " + model + " " + modelYear);
@@ -82,8 +91,10 @@ public class CarAuction{
      * user via console io, creates a new Chopper Bike from those properties, and
      * adds it to the vehicleArray in the car auction.
      * Used to add a new Chopper Bike to the car auction.
+     *
+     * @throws Exception when chopper bike maker, model, or modelYear are entered incorrectly.
      */
-    public void createChopperBike() {
+    public void createChopperBike() throws Exception {
         int vehicleId;
         String maker;
         String model;
@@ -100,8 +111,16 @@ public class CarAuction{
         model = scanner.next();
         System.out.print("Please enter a bike model year: ");
         modelYear = scanner.nextInt();
-        ChopperBike chopperBike = new ChopperBike(vehicleId, maker, model, modelYear);
-        vehicleArray.add(chopperBike);
+
+        try {
+            ChopperBike chopperBike = new ChopperBike(vehicleId, maker, model, modelYear);
+            vehicleArray.add(chopperBike);
+            System.out.println(chopperBike);
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
 
         //Closure statement for Chopper Bike
         System.out.println("Added a new chopper bike : " + maker + " " + model + " " + modelYear);
@@ -112,8 +131,10 @@ public class CarAuction{
      * user via console io, creates a new Bobber Bike from those properties, and
      * adds it to the vehicleArray in the car auction.
      * Used to add a new Bobber Bike to the car auction.
+     *
+     * @throws Exception when chopper bike maker, model, or modelYear are entered incorrectly.
      */
-    public void createBobberBike() {
+    public void createBobberBike() throws Exception {
         int vehicleId;
         String maker;
         String model;
@@ -130,8 +151,16 @@ public class CarAuction{
         model = scanner.next();
         System.out.print("Please enter a bike model year: ");
         modelYear = scanner.nextInt();
-        BobberBike bobberBike = new BobberBike(vehicleId, maker, model, modelYear);
-        vehicleArray.add(bobberBike);
+
+        try {
+            BobberBike bobberBike = new BobberBike(vehicleId, maker, model, modelYear);
+            vehicleArray.add(bobberBike);
+            System.out.println(bobberBike);
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
 
         //Closure statement for Bobber Bike
         System.out.println("Added a new Bobber bike : " + maker + " " + model + " " + modelYear);

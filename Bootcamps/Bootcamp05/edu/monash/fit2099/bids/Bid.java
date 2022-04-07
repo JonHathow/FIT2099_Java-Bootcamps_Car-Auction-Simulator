@@ -116,9 +116,8 @@ public class Bid {
     }
 
     //Description Method
-
     /**
-     * String method to print out the bid Id, the client Id, the price, and the date of
+     * String method to return the bid Id, the client Id, the price, and the date of
      * a bid.
      * @return A string containing the the bid Id, the client Id, the price, and the date of
      *      * a bid.

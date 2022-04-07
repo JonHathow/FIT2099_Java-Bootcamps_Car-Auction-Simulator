@@ -18,7 +18,7 @@ public class CarAuctionDriver{
      * from the user.
      * @param args string arguments required for the main method to run
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         //Local Variables
         int selection;
         CarAuction carAuction = new CarAuction();

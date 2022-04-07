@@ -30,15 +30,26 @@ public class Client {
     //Constructors
 
     //Old Constructors
-//    private Client (int clientId){
-//        setClientId(clientId);
-//    }
+    /**
+     * Client constructor that creates an anonymous client instance with Id number only.
+     * @param clientId the id number of the client.
+     */
+    private Client (int clientId){
+        setClientId(clientId);
+    }
 
-//    private Client(int clientId, String firstName, String lastName){
-//        setClientId(clientId);
-//        setFirstName(firstName);
-//        setLastName(lastName);
-//    }
+    /**
+     * Client constructor that creates a client instance with Id number, first name,
+     * and last name.
+     * @param clientId the id number of the client.
+     * @param firstName the first name of the client.
+     * @param lastName the last name of the client.
+     */
+    private Client(int clientId, String firstName, String lastName){
+        setClientId(clientId);
+        setFirstName(firstName);
+        setLastName(lastName);
+    }
 
     //Zero parameter Constructor
     /**
