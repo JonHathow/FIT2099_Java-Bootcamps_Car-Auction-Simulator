@@ -12,7 +12,14 @@ import java.util.Scanner;
  */
 public class CarAuctionDriver{
     //Main
+    /**
+     * The public static void main method that runs the car Auction, as well as
+     * displays the console based interface main menu and handles console based IO input
+     * from the user.
+     * @param args string arguments required for the main method to run
+     */
     public static void main(String[] args) {
+        //Local Variables
         int selection;
         CarAuction carAuction = new CarAuction();
 
@@ -53,8 +60,15 @@ public class CarAuctionDriver{
     }
 
     //Method to print menu
+    /**
+     * A method that displays the main menu of options in the console based interface for the
+     * user to interact with.
+     * @return a number that represents the choice of the user from the menu of options.
+     */
     public static int mainMenuSelect(){
+        //Scanner class instance as local variable.
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("+----------------------------------+");
         System.out.println("|        Welcome to Bootcamp       |");
         System.out.println("|             Week 4               |");

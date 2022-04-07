@@ -22,12 +22,29 @@ import java.util.Scanner;
  */
 public class CarAuction{
     //Attributes - Car Array is a dynamic array list.
+    /**
+     * An ArrayList of vehicles in the car auction, vehicleArray.
+     */
     private List<Vehicle> vehicleArray = new ArrayList<>();
+
+    /**
+     * An ArrayList of clients participating in the auction, clientArray.
+     */
     private List<Client> clientArray = new ArrayList<>();
+
+    /**
+     * An instance of scanner class to capture user input.
+     */
     Scanner scanner = new Scanner(System.in);
 
     //Methods
     //Create Sports Car Method
+    /**
+     * The method createSportsCars takes in car properties from the
+     * user via console io, creates a new Sport Car from those properties, and
+     * adds it to the vehicleArray in the car auction.
+     * Used to add a new Sport Car to the car auction.
+     */
     public void createSportsCars() {
         int vehicleId;
         String maker;
@@ -61,9 +78,10 @@ public class CarAuction{
 
     //Create Cruiser Bike Method - Chopper or Bobber Bike
     /**
-     * The method createCruiserBike takes in bike properties from the
+     * The method createChopperBike takes in bike properties from the
      * user via console io, creates a new Chopper Bike from those properties, and
      * adds it to the vehicleArray in the car auction.
+     * Used to add a new Chopper Bike to the car auction.
      */
     public void createChopperBike() {
         int vehicleId;
@@ -90,9 +108,10 @@ public class CarAuction{
     }
 
     /**
-     * The method createCruiserBike takes in bike properties from the
+     * The method createBobberBike takes in bike properties from the
      * user via console io, creates a new Bobber Bike from those properties, and
      * adds it to the vehicleArray in the car auction.
+     * Used to add a new Bobber Bike to the car auction.
      */
     public void createBobberBike() {
         int vehicleId;
@@ -119,6 +138,12 @@ public class CarAuction{
     }
 
     //Create Client Method
+    /**
+     * The method createClient takes in client properties from the
+     * user via console io, creates a new Client instance from those properties, and
+     * adds it to the clientArray in the car auction.
+     * Used to welcome a new client into participating in the car auction.
+     */
     public void createClient(){
         int clientId;
         String firstName;
@@ -141,6 +166,16 @@ public class CarAuction{
     }
 
     //Create Bid Method
+    /**
+     * The method createBid takes in bid properties from the
+     * user via console io, creates a new Bid instance from those properties, and
+     * adds it to the respective vehicle the bid was placed on in the vehicleArray.
+     * Used to enable a client to place a bid on a vehicle in the car auction.
+     *
+     * Also handles the calculation of tax for the vehicle if the vehicle is a taxable
+     * vehicle, and displays the vehicle, bid, client, and tax status of the vehicle
+     * on auction.
+     */
     public void createBid(){
         int vehicleId;
         int clientId;
@@ -202,6 +237,10 @@ public class CarAuction{
     }
 
     //Display Car method - display cars in carArray
+    /**
+     *  The method displayFleet displays the status of the car auction to the user,
+     *  showing which cars are currently in the car auction.
+     */
     public void displayFleet(){
         if (vehicleArray.size() > 0) {
             for (int i = 0; i < vehicleArray.size(); i++) {
@@ -215,6 +254,10 @@ public class CarAuction{
     }
 
     //Display Clients method - display clients in clientArray
+    /**
+     *  The method displayFleet displays the status of the clients to the user,
+     *  showing which clients are welcomed into participating in the auction.
+     */
     public void displayClients(){
         if (clientArray.size() > 0) {
             for (int i = 0; i < clientArray.size(); i++) {
@@ -227,6 +270,9 @@ public class CarAuction{
     }
 
     //Print Auction Status method
+    /**
+     *  The method printStatus displays the status of the car auction to the user.
+     */
     public void printStatus(){
         System.out.println("Welcome to FIT2099 Car Auction Systems");
         System.out.println("Cars currently in auction:");
