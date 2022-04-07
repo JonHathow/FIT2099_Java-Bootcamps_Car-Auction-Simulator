@@ -133,11 +133,11 @@ public class CarAuction{
         firstName = scanner.next();
         System.out.print("Please enter the client's last name: ");
         lastName = scanner.next();
-        Client client = new Client(clientId,firstName,lastName);
+        Client client = Client.getInstance(firstName,lastName);
         clientArray.add(client);
 
         //Closure statement for Client
-        System.out.println("Added a new client : " + clientId + " " + firstName + " " + lastName);
+        System.out.println("Adding client option complete.");
     }
 
     //Create Bid Method
